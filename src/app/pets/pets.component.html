@@ -1,0 +1,9 @@
+<div *ngFor='let item of cats'>
+  <!-- <div *ngFor='let message of messageService.messages'> {{message}} </div> -->
+
+  <h2 >{{item[0]}}</h2>
+
+  <li *ngFor='let cat of item[1]'>{{cat.petName}}</li>
+
+
+</div>
