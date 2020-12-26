@@ -26,7 +26,7 @@ export class PetsComponent implements OnInit {
 			.get<any>(
 				`${environment.baseUrl}/owners`
 			)
-			.pipe(map(users => users || []))
+			.pipe(map(owners => owners || []))
 			.pipe(map(data => _.flatMap(data, ({ gender, pets }) => _.map(pets, (pet) => ({ gender: gender, type: pet.type, petName: pet.name })))))
 			.pipe(map(data => data.filter(item => item.type === 'Cat')))
 			.pipe(map(pets => _.groupBy(pets, pet => pet.gender)))
