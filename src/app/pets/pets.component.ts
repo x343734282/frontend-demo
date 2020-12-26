@@ -17,11 +17,11 @@ export class PetsComponent implements OnInit {
 	constructor(private http: HttpClient) { }
 
 	ngOnInit() {
-		this.fetchUserByForThread();
+		this.fetchCats();
 	}
 
 
-	private fetchUserByForThread(): void {
+	private fetchCats(): void {
 		this.http
 			.get<any>(
 				`${environment.baseUrl}/owners`
