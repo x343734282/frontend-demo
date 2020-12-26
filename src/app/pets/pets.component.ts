@@ -36,7 +36,7 @@ export class PetsComponent implements OnInit {
 					// code...
 					const newData = Object.entries(data);
 					for (const [key, list] of Object.entries(data)) {
-						const sorted = list.sort((a, b)=> {
+						const sorted = list.sort((a, b) => {
 							if (a.petName < b.petName) { return -1; }
 							if (a.petName > b.petName) { return 1; }
 							return 0;
